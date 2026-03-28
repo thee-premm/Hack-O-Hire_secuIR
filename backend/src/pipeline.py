@@ -1,9 +1,13 @@
 import pandas as pd
 import pickle
 import numpy as np
+import os
 import uuid
 from datetime import datetime
 from collections import defaultdict
+
+# Base directory for resolving relative paths (src/)
+_BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 from state.session_manager import SessionManager
 from state.baseline_manager import BaselineManager
 from state.risk_memory import RiskMemory
@@ -33,10 +37,10 @@ class DetectionPipeline:
         self.core_builder = CoreFeatureBuilder(self.session_mgr, self.baseline_mgr, self.risk_memory)
         self.ext_builder = ExtendedFeatureBuilder(self.risk_memory)
         
-        # Load models
-        with open('models/lr_model.pkl', 'rb') as f:
+        # Load models (resolve relative to src/ directory)
+        with open(os.path.join(_BASE_DIR, 'models', 'lr_model.pkl'), 'rb') as f:
             self.lr_model, self.lr_scaler = pickle.load(f)
-        with open('models/iso_model.pkl', 'rb') as f:
+        with open(os.path.join(_BASE_DIR, 'models', 'iso_model.pkl'), 'rb') as f:
             self.iso_model, self.iso_scaler = pickle.load(f)
         
         # Track processed events for evidence
