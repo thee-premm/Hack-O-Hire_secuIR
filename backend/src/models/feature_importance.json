@@ -1,0 +1,32 @@
+{
+  "xgboost": {
+    "severity_score": 0.96519,
+    "attempts": 0.02789,
+    "has_error": 0.00324,
+    "has_ip": 0.00117,
+    "bl_baseline_confidence": 0.00088,
+    "source_risk_score": 0.00038,
+    "ip_is_internal": 0.00033,
+    "message_length": 0.0003,
+    "contains_sensitive_keyword": 0.00022,
+    "bl_login_hour_deviation": 0.00022,
+    "is_high_risk_event": 0.00016,
+    "geo_risk": 0.0,
+    "bl_device_match_score": 0.0,
+    "bl_is_new_user": 0.0,
+    "bl_location_match_score": 0.0
+  },
+  "logistic_regression": {
+    "login_hour_deviation": 0.0175,
+    "last_window_risk": 0.0,
+    "transaction_amount_zscore": 0.0,
+    "cumulative_risk": 0.0,
+    "location_deviation_km": 0.0,
+    "device_match_score": 0.0,
+    "session_avg_rate": 0.0,
+    "session_entropy": 0.0,
+    "session_event_count": 0.0,
+    "day_of_week": 0.0,
+    "hour_of_day": 0.0
+  }
+}

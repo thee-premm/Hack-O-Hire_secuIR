@@ -1,0 +1,45 @@
+{
+  "trained_at": "2026-03-29T02:13:10.998604",
+  "dataset_dir": "C:\\Users\\thee_premm\\OneDrive\\Desktop\\HackOHire\\DataSet\\bank_security_dataset_70k",
+  "sample_fraction": 1.0,
+  "models": [
+    "lr",
+    "iso",
+    "xgb"
+  ],
+  "feature_names": [
+    "message_length",
+    "has_ip",
+    "has_error",
+    "attempts",
+    "severity_score",
+    "source_risk_score",
+    "is_high_risk_event",
+    "ip_is_internal",
+    "contains_sensitive_keyword",
+    "geo_risk",
+    "bl_login_hour_deviation",
+    "bl_device_match_score",
+    "bl_location_match_score",
+    "bl_is_new_user",
+    "bl_baseline_confidence"
+  ],
+  "metrics_summary": {
+    "logistic_regression": {
+      "f1": 0.3306,
+      "roc_auc": 0.4933
+    },
+    "xgboost": {
+      "f1": 1.0,
+      "roc_auc": 1.0
+    },
+    "isolation_forest": {
+      "f1": 0.0562,
+      "roc_auc": 0.504
+    },
+    "ensemble": {
+      "f1": 1.0,
+      "roc_auc": 1.0
+    }
+  }
+}

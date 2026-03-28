@@ -1,0 +1,5 @@
+Split,Rows,High_Risk_%
+Training,50000,20.2%
+Testing,12683,20.2%
+Calibration,8000,20.2%
+Total,70683,20.2%

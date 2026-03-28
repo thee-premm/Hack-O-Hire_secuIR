@@ -1,0 +1,15 @@
+{
+  "populated_at": "2026-03-29T01:32:30",
+  "events_processed": 49029,
+  "users_populated": 32812,
+  "elapsed_seconds": 3.7,
+  "global_avg_login_hour": 11.31,
+  "global_std_login_hour": 7.02,
+  "severity_distribution": {
+    "LOW": 26310,
+    "CRITICAL": 4154,
+    "MEDIUM": 11951,
+    "HIGH": 5683,
+    "UNKNOWN": 931
+  }
+}
